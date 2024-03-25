@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/home.css">
+</head>
+
+<body>
+    <div class="search">
+        <form action="{{url_for('search')}}" method="post">
+            <div id='search-field'>
+                <input type="text" name='search' placeholder="Search Post">
+            </div>
+        </form>
+    </div>
+
+
+    
+    
+    <div class="instagram-wrapper">
+        <div class="banner">
+            <img id="banner_image" src="../static/images/output.webp" alt="">
+        </div>
+        <div class="post-wrapper">
+            <!-- {% for val in data if val['media_type'] == 'VIDEO' %}
+            <a href="{{val['permalink']}}"><img src="{{val['thumbnail_url']}}" alt=""></a>
+            {% endfor %} -->
+            {% for val in data %}
+                {%if val['media_type'] == 'VIDEO' %}
+                    <div class="post">
+                        <a href="{{val['permalink']}}"><img src="{{val['thumbnail_url']}}" alt=""></a>
+                    </div>
+                {% else %}
+                    <div class="post">
+                        <a href="{{val['permalink']}}"><img src="{{val['media_url']}}" alt=""></a>
+                    </div>
+                {% endif %}
+            
+            {% endfor %}
+
+
+            <!-- {% for val in data if val['media_type'] == 'IMAGE' %}
+            <a href="{{val['permalink']}}"><img src="{{val['media_url']}}" alt=""></a>
+            {% endfor %} -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+.search {
+  border-radius: 10px;
+  margin: 20px auto;
+  justify-content: center;
+}
+.search #search-field {
+  margin: auto;
+  justify-content: center;
+  width: 180px;
+  border-radius: 5px;
+}
+.search #search-field input[type=text] {
+  justify-content: center;
+  text-align: center;
+  height: 25px;
+  border: 2px solid #808080;
+  border-radius: 10px;
+}
+
+.instagram-wrapper {
+  grid-area: content;
+  max-width: 935px;
+  justify-content: left;
+  min-height: 700px;
+  margin: auto;
+}
+.instagram-wrapper .banner {
+  width: 930px;
+  justify-content: center;
+  margin: auto;
+}
+.instagram-wrapper .banner #banner_image {
+  width: 100%;
+}
+
+.post {
+  max-width: 308px;
+  max-height: 307px;
+  float: left;
+  margin: 2px 1px 2px 2px;
+}
+
+.post-wrapper img {
+  width: 308px;
+  height: 307px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=home.css.map */
